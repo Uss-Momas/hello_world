@@ -9,8 +9,7 @@ package hello_world;
  *
  * @author Uss-momade
  */
-public class Hello_world {
-
+public class hello_world {
     /**
      * @param args the command line arguments
      */
