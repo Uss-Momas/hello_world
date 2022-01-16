@@ -13,15 +13,14 @@ pipeline {
                 
             }
         }
-        stage('Running Java App') {
+        stage('Compiling') {
             steps {
-                sh 'javac Hello_world.java'
-                sh 'java Hello_world.class'
+                sh 'javac hello_world.java'
             }
         }
-        stage('Deploy') {
+        stage('Running') {
             steps {
-                echo 'Deploying....'
+                sh 'java hello_world'
             }
         }
     }
