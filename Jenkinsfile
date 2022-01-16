@@ -2,12 +2,8 @@ pipeline {
     agent any
 
     stages {
-        stage('run frontend') {
+        stage('build') {
             steps {
-                echo 'executing yarn...'
-                nodejs('Node-10.17'){
-                    sh 'yarn install'
-                }
                 echo 'Building..'
             }
         }
