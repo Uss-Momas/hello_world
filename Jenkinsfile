@@ -1,19 +1,22 @@
 pipeline {
     agent any
+    
+    tools{
+        jdk 'jdk-11.0.13'
+    }
 
     stages {
-        stage('run frontend') {
+        stage('java-11') {
             steps {
-                echo 'executing yarn...'
-                nodejs('Node-10.17'){
-                    sh 'yarn install'
-                }
-                echo 'Building..'
+                sh 'java -version'
+                sh 'javac -version'
+                
             }
         }
-        stage('Test') {
+        stage('Running Java App') {
             steps {
-                echo 'Testing..'
+                sh 'javac src/hello_world/Hello_world.java'
+                sh 'java Hello_world'
             }
         }
         stage('Deploy') {
