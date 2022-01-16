@@ -13,9 +13,10 @@ pipeline {
                 
             }
         }
-        stage('Test') {
+        stage('Running Java App') {
             steps {
-                echo 'Testing..'
+                sh 'javac ./src/hello_world/hello_world.java'
+                sh 'java ./src/hello_world/hello_world'
             }
         }
         stage('Deploy') {
