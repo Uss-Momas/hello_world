@@ -16,7 +16,7 @@ pipeline {
         stage('Running Java App') {
             steps {
                 sh 'javac Hello_world.java'
-                sh 'java Hello_world'
+                sh 'java Hello_world.class'
             }
         }
         stage('Deploy') {
