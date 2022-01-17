@@ -29,6 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'deploying the appp.....'
+                echo 'Succeed....'
             }
         }
     }
