@@ -2,9 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('nome-da-fase') {
+        stage('build') {
             steps {
-                echo ''
+                echo 'building the appp.....'
+            }
+        }
+        
+        stage('teste') {
+            steps {
+                echo 'Testing the appp.....'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'deploying the appp.....'
             }
         }
     }
