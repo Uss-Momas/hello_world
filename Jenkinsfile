@@ -6,12 +6,20 @@ pipeline {
     }
     
     stages {
-        stage('build') {
+        stage('Java-version') {
             steps {
                 sh 'java -version'
                 sh 'javac -version'
             }
         }
+        
+        stage('Build-compile and Run') {
+            steps { 
+                sh 'javac hello_world.java'
+                sh 'java hello_world'
+            }
+        }
+        
         
         stage('teste') {
             steps {
