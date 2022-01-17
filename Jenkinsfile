@@ -1,10 +1,15 @@
 pipeline {
     agent any
-
+    
+    tools{
+        jdk 'jdk-11.0.13'
+    }
+    
     stages {
         stage('build') {
             steps {
-                echo 'building the appp.....'
+                sh 'java -version'
+                sh 'javac -version'
             }
         }
         
